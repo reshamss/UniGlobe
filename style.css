@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Background with overlay */
+body {
+  background: url("uni.jpg")no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(1px);     
+  z-index: 0;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e68900;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff9800;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+#results {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(59, 58, 58, 0.15);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.card a {
+  color: #ffeb3b;
+  text-decoration: none;
+}

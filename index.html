@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="uni_logo.png">
+  <title>University Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 University Finder</h1>
+    <div class="search-box">
+      <input id="countryInput" placeholder="Enter country (e.g. Nepal)">
+      <button id="searchBtn">🔍 Search</button>
+    </div>
+    <div id="loader" class="loader hidden"></div>
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
